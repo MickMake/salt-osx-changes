@@ -414,7 +414,7 @@ def _available_services(refresh=False):
     # Not sure which is better, but either works.
     agent_path = os.path.expanduser('~') + "/Library/LaunchAgents"
     if os.path.isdir(agent_path.format(agent_path)):
-        launchd_paths.update(os.path.expanduser('~') + "/Library/LaunchAgents")
+        launchd_paths.update(agent_path)
     log.error("mmDEBUG: " + agent_path)
 
     agent_path = "/Users/{}/Library/LaunchAgents"
